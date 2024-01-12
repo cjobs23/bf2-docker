@@ -18,9 +18,6 @@ apt-get clean
 rm -rf /var/lib/apt/lists/*
 useradd --create-home --shell /bin/bash bf2
 
-# Replace nginx settings
-mv "$TMP/nginx/default" '/etc/nginx/sites-available/'
-
 # Delete temp files, but not the temp server directory to move during start
 find $TMP/* -maxdepth 0 -type d,f -not -name 'srv' -not -name 'run.sh' -exec rm -r "{}" \;
 
