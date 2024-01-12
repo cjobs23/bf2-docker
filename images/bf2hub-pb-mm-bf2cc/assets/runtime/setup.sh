@@ -14,7 +14,6 @@ TMP='/home/bf2/tmp'
 dpkg --add-architecture i386
 apt -y update
 apt-get -y update
-apt-get -y install libncurses5 python nginx libglib2.0-0:i386
 apt-get clean
 rm -rf /var/lib/apt/lists/*
 useradd --create-home --shell /bin/bash bf2
